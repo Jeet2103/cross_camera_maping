@@ -108,7 +108,7 @@ The project requires the following Python packages:
 Python version: **3.9 or above**
 
 
-### Step 4: Download YOLOv11 Model
+### 4: Download YOLOv11 Model
 
 Download the YOLOv11 model from the following link:
 
@@ -118,7 +118,7 @@ After downloading, place the model file (`best.pt`) inside the `model/` director
 
 
 
-## Running the Project
+## 👌Running the Project
 
 After installation, run the main pipeline using:
 
