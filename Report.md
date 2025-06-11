@@ -177,25 +177,25 @@ Attempted direct cosine similarity matching between broadcast and tacticam featu
 
 ## Challenges Encountered
 
-    1. **Tracking Instability in Crowded Sports Scenarios:**
+- 1. **Tracking Instability in Crowded Sports Scenarios:**
 While using DeepSORT as an initial tracking baseline, the model frequently lost track of player identities during occlusions and rapid movements. In fast-paced environments like football matches, ID switches and track fragmentation were common—reducing tracking reliability over time.
 
-        2. **Poor Generalization of EfficientNet-B3 for Appearance Re-ID:**
+- 2. **Poor Generalization of EfficientNet-B3 for Appearance Re-ID:**
 Despite its strong performance in generic classification tasks, EfficientNet-B3 failed to generate discriminative enough embeddings for player re-identification across two camera angles. The extracted features lacked consistency under varying poses and resolutions, leading to low cross-view matching accuracy.
 
-    3. **Ineffectiveness of Cosine Similarity Alone for Cross-View Matching:**
+- 3. **Ineffectiveness of Cosine Similarity Alone for Cross-View Matching:**
 An early attempt to match players across views using only cosine similarity of appearance features resulted in poor precision. Appearance features alone couldn't account for changes in viewpoint, scale, and lighting—especially with broadcast and tacticam having drastically different perspectives.
 
-    4. **Homography Limitations in Non-Planar Fields:**
+- 4. **Homography Limitations in Non-Planar Fields:**
 Although homography transformation aligned player coordinates reasonably well, slight misalignments due to field curvature, camera lens distortion, and height differences in player position caused errors in spatial feature calculation—affecting downstream FAISS-based matching.
 
-    5. **Real-Time Visualization Bottlenecks:**
+- 5. **Real-Time Visualization Bottlenecks:**
 Rendering annotated videos with multiple players in high resolution posed performance bottlenecks. Using OpenCV’s rendering pipeline in CPU mode was computationally expensive, slowing down visual debugging and making batch visualization less efficient.
 
-    6. **Noise in Bounding Box Crops During Feature Extraction:**
+- 6. **Noise in Bounding Box Crops During Feature Extraction:**
 Small bounding boxes or poor-quality crops (e.g., partial players or overlapping objects) affected the reliability of ReID feature vectors. This introduced noise into the embedding space and skewed player similarity scores.
 
-    7. **Data Synchronization Between Camera Views:**
+- 7. **Data Synchronization Between Camera Views:**
 Broadcast and tacticam videos often had unsynchronized frame indices or dropped frames. Aligning them for consistent frame-by-frame comparison was a manual and error-prone task that occasionally introduced inconsistencies in tracking and mapping.
 
 ## Future Enhancements & System Improvements
