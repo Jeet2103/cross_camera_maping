@@ -129,39 +129,39 @@ These outputs are essential for visual evaluation of multi-camera player identit
 
 ### Successful Approaches
 
-- **YOLOv5 (Torchvision-based) for Player Detection**
+- **YOLOv5 (Torchvision-based) for Player Detection:**
 Utilized pretrained weights for robust player detection in both broadcast and tacticam videos. Achieved high precision in complex and crowded scenes.
 
-- **StrongSORT for Object Tracking**
+- **StrongSORT for Object Tracking:**
 Outperformed DeepSORT in maintaining consistent track_ids over time. Better handled occlusions, re-identification, and rapid player movements in sports scenarios.
 
-- **OSNet for Re-Identification (ReID) Feature Extraction**
+- **OSNet for Re-Identification (ReID) Feature Extraction:**
 Integrated with torchreid, OSNet provided compact and discriminative appearance embeddings crucial for player identity preservation.
 
-- **Homography Transformation for Spatial Alignment**
+- **Homography Transformation for Spatial Alignment:**
 Enabled mapping of player coordinates across camera views, crucial for cross-view consistency.
 
-- **FAISS + Hungarian Algorithm for Cross-View Player Mapping**
+- **FAISS + Hungarian Algorithm for Cross-View Player Mapping:**
 Combined cosine similarity of appearance embeddings with spatial distance for accurate player matching. Weighted combination (0.7 appearance, 0.3 spatial) significantly improved results.
 
-- **OpenCV for Visualization and Result Validation**
+- **OpenCV for Visualization and Result Validation:**
 Generated annotated video outputs with bounding boxes and cross-mapped IDs to verify tracking and identity alignment.
 
-- **TensorBoard for Feature Embedding and Performance Monitoring**
+- **TensorBoard for Feature Embedding and Performance Monitoring:**
 Used to visualize training dynamics and embeddings to assess model convergence and separation of identities.
 
-- **Scikit-learn for Metric Evaluation and Similarity Computation**
+- **Scikit-learn for Metric Evaluation and Similarity Computation:**
 Applied for L2 normalization, cosine similarity validation, and clustering metrics during evaluation phases.
 
 ### Techniques Explored But Not Adopted
 
-- **DeepSORT for Tracking**
+- **DeepSORT for Tracking:**
 Initially integrated for temporal tracking but failed to maintain stable identities under frequent occlusions and dense group interactions, leading to frequent ID switches.
 
-- **EfficientNet-B3 for Feature Extraction**
+- **EfficientNet-B3 for Feature Extraction:**
 Tried as an alternative to OSNet for ReID, but failed to generate sufficiently discriminative features for cross-player matching. Resulted in low identity recall.
 
-- **Pure Cosine Similarity for Cross-View Mapping**
+- **Pure Cosine Similarity for Cross-View Mapping:**
 Attempted direct cosine similarity matching between broadcast and tacticam features. Performed poorly due to the lack of spatial context and camera viewpoint disparity.
 
 ### Tech Stack Overview
