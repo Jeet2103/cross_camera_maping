@@ -23,6 +23,8 @@ For precise and high-speed detection of players, the system utilizes the YOLOv11
 - **Output:**
     - Detected bounding boxes with class labels (`player`, `goalkeeper`, `referee`, `ball`) and confidence scores.
 
+    - For both the broadcast view and the tactical view videos, the detection module automatically generates two CSV files with the following format: `frame_id`, `x1`, `y1`, `x2`, `y2`, `confidence_score`, `class`
+
     - These outputs are forwarded to the tracking pipeline for identity assignment and continuity across frames.
 
 - **Implementation File:**
