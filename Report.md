@@ -1,10 +1,10 @@
-# 📄 Brief Report: Cross-View Player Mapping & Re-identification System
+# Brief Report: Cross-View Player Mapping & Re-identification System
 
 The objective of this project is to build an advanced cross-view player tracking and re-identification system that effectively maps and tracks players across broadcast and tactical (top-down) camera views. In sports analytics, especially in football or basketball, player identities often become ambiguous when switching between different camera feeds. This system addresses that challenge by ensuring consistent player identification across disjoint views, enabling deeper insights into player movements, formations, and tactical decisions.
 
-## 🔄 Detailed Workflow Summary
+## Detailed Workflow Summary
 
-### 📌 1. Player Detection with YOLOv11
+### 1. Player Detection with YOLOv11
 
 For precise and high-speed detection of players, the system utilizes the YOLOv11 (You Only Look Once version 11) object detection framework—renowned for its cutting-edge performance on both GPU and edge devices.
 
@@ -18,11 +18,14 @@ For precise and high-speed detection of players, the system utilizes the YOLOv11
 
     - **Advanced Detection Head:** Enhanced localization and classification, especially in high-density scenes with overlapping individuals.
 
-    - **Temporal Consistency:** Reduces false positives and ID switches during rapid game transitions.
+    - **Temporal Consistency:** The detector has been optimized to maintain consistent detection across frames, reducing ID switches and missed detections in fast-paced scenes.
 
 - **Output:**
-The model outputs bounding boxes with class labels and confidence scores, which are passed directly to the tracking module for identity persistence.
+    - Detected bounding boxes with class labels (`player`, `goalkeeper`, `referee`, `ball`) and confidence scores.
 
-🧾 `detect_players.py` — Player Detection Script
-Below is the implementation of the detection module using the `best.pt` YOLOv11 model:
+    - These outputs are forwarded to the tracking pipeline for identity assignment and continuity across frames.
+
+- **Implementation File:**
+    - **Filename:** `detect_players.py`
+    (This script handles loading the YOLOv11 model, running inference on input images or video, drawing bounding boxes, and saving annotated results. It also integrates logging via the custom logger module.)
 
