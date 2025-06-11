@@ -1,55 +1,79 @@
 # Cross Camera Mapping
 
-**Cross Camera Mapping** is a computer vision system designed to accurately detect, track, and map players across multiple camera feeds—such as broadcast and tacticam views—using state-of-the-art object detection, feature extraction, and identity matching techniques.
+Cross Camera Mapping is a computer vision pipeline designed to track and match players across two different camera feeds (e.g., broadcast view and tacticam) using deep learning-based detection, tracking, appearance feature extraction, and spatial matching.
 
----
-
-## 📁 Project Structure
+## Project Structure
 
 
----
+## Setup Instructions
 
-## 🔁 Workflow
+### 1. Clone the Repository
 
-1. **Input Videos**  
-   - Place the broadcast and tacticam videos inside the `data/` folder.
+Clone the project from GitHub:
 
-2. **Player Detection**  
-   - Run `detect_players.py` to detect players in both views using YOLOv5.  
-   - Outputs stored in `detections/`.
+`git clone https://github.com/Jeet2103/cross_camera_maping.git`
+`cd cross_camera_maping`
 
-3. **Player Tracking**  
-   - Use `track_players.py` with StrongSORT to generate consistent player IDs across frames.  
-   - Tracked results are saved in `tracking/`.
 
-4. **Homography Computation**  
-   - Run `compute_homography.py` to calculate spatial transformation (homography) between the two views.  
-   - This enables mapping coordinates from one view to another.
+### 2. Create and Activate a Virtual Environment
 
-5. **Appearance Feature Extraction**  
-   - Execute `extract_features.py` to extract deep visual features using the OSNet re-ID model for each tracked player.  
-   - Feature vectors are saved for matching.
+You can use either `venv` or `conda` to manage your environment.
 
-6. **Cross-View Matching**  
-   - Launch `match_players.py` to match players across views using FAISS + Hungarian algorithm.  
-   - Combines appearance features and spatial position via homography for high-accuracy mapping.
+**Using `venv`:**
 
-7. **Visualization**  
-   - Run `visualize_results.py` to render the matched players between the two views.  
-   - Final annotated videos and overlays are stored in the `output/` directory.
+- **For Windows:**
+  - Create: `python -m venv venv`
+  - Activate: `venv\Scripts\activate`
 
-8. **Pipeline Automation**  
-   - Use `pipeline.py` to run the entire pipeline from detection to visualization in one go.
+- **For Linux/MacOS:**
+  - Create: `python3 -m venv venv`
+  - Activate: `source venv/bin/activate`
 
-9. **Logging**  
-   - All steps utilize a centralized logger defined in `logger_config/logger.py`  
-   - Logs are stored in the `logs/` folder for debugging and analysis.
+**Using `conda`:**
 
----
+- Create: `conda create -n ccm_env python=3.9`
+- Activate: `conda activate ccm_env`
 
-## ✅ Requirements
+### 3. Install Dependencies
 
-Install dependencies using:
+Install all required dependencies using the following command:
 
-```bash
-pip install -r requirements.txt
+
+`pip install -r requirements.txt`
+
+## Dependencies
+
+The project requires the following Python packages:
+
+- ultralytics  
+- opencv-python  
+- torch  
+- torchvision  
+- numpy  
+- pandas  
+- matplotlib  
+- deep-sort-realtime  
+- scikit-learn  
+- torchreid  
+- tensorboard  
+- cython  
+- charset-normalizer  
+- chardet  
+- faiss-cpu  
+
+Python version: **3.9 or above**
+
+## Running the Project
+
+After installation, run the main pipeline using:
+
+`python pipeline.py`
+
+This will perform detection, tracking, feature extraction, and cross-camera matching, and generate output with visual identity mapping.
+
+## Contact
+
+Maintained by **Jeet Nandigrami**  
+- GitHub: [Jeet2103](https://github.com/Jeet2103)  
+- LinkedIn: [Jeet Nandigrami](https://www.linkedin.com/in/jeet-nandigrami/)
+- Resume : [RESUME](https://drive.google.com/file/d/1Zvm0yAK--t_K-lNBpLnDFA2Lz41ZBqvX/view?usp=sharing)
