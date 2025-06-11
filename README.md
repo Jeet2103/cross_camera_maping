@@ -18,7 +18,7 @@ This project is an advanced cross-view player tracking system that accurately ma
 
 ---
 ## 📁 Project Structure
-
+```
 cross_camera_mapping/
 ├── data/ # Input video files
 │ ├── broadcast.mp4 # Broadcast camera feed
@@ -46,6 +46,7 @@ cross_camera_mapping/
 ├── visualize_results.py # Visualization utilities
 │
 └── requirements.txt # Project dependencies
+```
 ---
 
 ## 🚀 Setup Instructions
