@@ -31,3 +31,22 @@ For precise and high-speed detection of players, the system utilizes the YOLOv11
     - **Filename:** `detect_players.py`
     (This script handles loading the YOLOv11 model, running inference on input images or video, drawing bounding boxes, and saving annotated results. It also integrates logging via the custom logger module.)
 
+### 2. Player Tracking with StrongSORT
+
+To ensure consistent identification of players across time, the system implements StrongSORT — a powerful real-time multi-object tracking (MOT) framework. It is a robust extension of DeepSORT, designed specifically to handle the challenges of dense scenes, occlusions, and rapid movements commonly observed in sports footage.
+
+- **Key Features:**
+    - **Input:** CSVs from `detect_players.py` containing detections (`frame ID`, `bounding boxes`, `confidence`, `class`).
+
+    - **Motion Modeling:** Uses a Kalman Filter to estimate and predict player positions frame by frame.
+
+    - **Appearance Embedding:** Integrates ReID features to preserve identity even during occlusions or overlaps.
+
+    - **Track ID Assignment:** Assigns a unique track_id to each player per view that remains consistent as long as the player is visible.
+
+- **Output:**
+    - Generates two tracking CSVs, one for each video containing `frame_id`, `track_id`, `x1`, `y1`, `x2`, `y2`, `class`
+    - Used for further cross-view matching and features extraction.
+    - Each tracking step is logged using the custom `logger.py` for transparency and debugging.
+- **Implementation File:**
+    - **Filename:** `track_players.py`
