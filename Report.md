@@ -87,9 +87,40 @@ To match players:
 Thresholding is applied to eliminate weak matches. Each accepted mapping is logged with a confidence score, and unmatched players are skipped with a warning for transparency.
 
 - **Output:**
-    - A JSON file id_mapping.json is saved in the `mapping/ directory`, mapping each `track_id` from the tacticam video to its corresponding ID in the broadcast view. This mapping ensures identity consistency for visualization and further tactical interpretation.
+    - A JSON file `id_mapping.json` is saved in the `mapping/` directory, mapping each `track_id` from the tacticam video to its corresponding ID in the broadcast view. This mapping ensures identity consistency for visualization and further tactical interpretation.
 
     - All processing steps, score thresholds, and exceptions are traced via `match_players.log`.
 
 - **Implementation File:**
     - **Filename:** `match_players.py`
+
+### 5. Visualizing Final Player Tracking and Cross-View Mapping
+- **Objective:**
+This module visually presents the player tracking results for both camera views (broadcast and tacticam), integrating cross-view player ID mappings. The aim is to create clear, annotated videos that reflect consistent player identities across perspectives.
+
+- **Methodology:**
+The system loads tracking data from CSV files (`broadcast_tracks.csv` and `tacticam_tracks.csv`) and a previously generated player ID mapping (`id_mapping.json`).
+For each frame in both videos:
+
+    - Bounding boxes are drawn around each detected player.
+
+    - Player IDs are overlaid:
+
+        - For broadcast, original track IDs are used.
+
+        - For tacticam, mapped IDs from the broadcast view are shown in green if available.
+
+        - Unmatched tacticam players are labeled NoMap:{`track_id`} in red.
+
+All processing is logged via `visualize_results.log`. The frame-wise annotations help verify accuracy of tracking and cross-view alignment.
+
+- **Output:**
+Two annotated videos are generated and saved in the `output/` directory:
+
+    - `broadcast_output.mp4`
+
+    - `tacticam_output.mp4`
+These outputs are essential for visual evaluation of multi-camera player identity consistency.
+
+- **Implementation File:**
+    - **Filename:** `visualize_results.py`
