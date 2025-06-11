@@ -1,0 +1,1 @@
+2025-06-11 20:45:47 [ERROR] [detect_players.py] Failed to load model from model/best.pt: invalid load key, '<'.
