@@ -1,17 +1,27 @@
-# Cross Camera Mapping
+# 🎥 Cross Camera Mapping Project
 
-Cross Camera Mapping is a computer vision pipeline designed to track and match players across two different camera feeds (e.g., broadcast view and tacticam) using deep learning-based detection, tracking, appearance feature extraction, and spatial matching.
+This project is an advanced cross-view player tracking system that accurately maps and re-identifies players across broadcast and tactical camera feeds using state-of-the-art computer vision techniques.
 
-## Project Structure
+## ✨ Key Features
+- **Multi-Camera Tracking**: Seamless player identification across different views
+- **Advanced Algorithms**: Combines YOLOv11, StrongSORT, and OSNet
+- **Real-Time Processing**: Efficient pipeline for sports analytics
+- **Precise Mapping**: Homography transformation for accurate position mapping
+- **Fast Matching**: FAISS-based similarity search for player re-identification
 
+## 🛠️ Technical Stack
+- **Detection**: YOLOv11
+- **Tracking**: StrongSORT
+- **Features Extraction**: OSNet
+- **Geometry**: Homography Transformation
+- **Matching players**: FAISS
 
-## Setup Instructions
+---
+
+## 🚀 Setup Instructions
 
 ### 1. Clone the Repository
-
-Clone the project from GitHub:
-
-```
+```bash
 git clone https://github.com/Jeet2103/cross_camera_maping.git
 cd cross_camera_maping
 
