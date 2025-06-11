@@ -11,8 +11,11 @@ Cross Camera Mapping is a computer vision pipeline designed to track and match p
 
 Clone the project from GitHub:
 
-`git clone https://github.com/Jeet2103/cross_camera_maping.git`
-`cd cross_camera_maping`
+```
+git clone https://github.com/Jeet2103/cross_camera_maping.git
+cd cross_camera_maping
+
+```
 
 
 ### 2. Create and Activate a Virtual Environment
