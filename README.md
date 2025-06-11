@@ -1,15 +1,15 @@
-# 🎥 Cross Camera Mapping Project
+# Cross Camera Mapping Project
 
 This project is an advanced cross-view player tracking system that accurately maps and re-identifies players across broadcast and tactical camera feeds using state-of-the-art computer vision techniques.
 
-## ✨ Key Features
+## Key Features
 - **Multi-Camera Tracking**: Seamless player identification across different views
 - **Advanced Algorithms**: Combines YOLOv11, StrongSORT, and OSNet
 - **Real-Time Processing**: Efficient pipeline for sports analytics
 - **Precise Mapping**: Homography transformation for accurate position mapping
 - **Fast Matching**: FAISS-based similarity search for player re-identification
 
-## 🛠️ Technical Stack
+## Technical Stack
 - **Detection**: YOLOv11
 - **Tracking**: StrongSORT
 - **Features Extraction**: OSNet
@@ -17,7 +17,7 @@ This project is an advanced cross-view player tracking system that accurately ma
 - **Matching players**: FAISS
 
 ---
-## 📁 Project Structure
+## Project Structure
 ```
 cross_camera_mapping/
 ├── data/ # Input video files
@@ -49,7 +49,7 @@ cross_camera_mapping/
 ```
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
@@ -118,7 +118,7 @@ After downloading, place the model file (`best.pt`) inside the `model/` director
 
 
 
-## 👌Running the Project
+## Running the Project
 
 After installation, run the main pipeline using:
 
