@@ -17,6 +17,36 @@ This project is an advanced cross-view player tracking system that accurately ma
 - **Matching players**: FAISS
 
 ---
+## 📁 Project Structure
+
+cross_camera_mapping/
+├── data/ # Input video files
+│ ├── broadcast.mp4 # Broadcast camera feed
+│ └── tacticam.mp4 # Tactical camera feed
+│
+├── model/ # Model weights
+│ └── best.pt # YOLOv11 model file
+│
+├── detections/ # Player detection outputs(.csv file)
+├── tracking/ # Player tracking data(.csv file)
+├── mapping/ # Camera mapping data(.npy files and json file)
+├── output/ # Final output files(.mp4 file)
+├── logs/ # System logs
+│
+├── logger_config/ # Logging configuration
+│ └── logger.py # Logger implementation
+│
+├── compute_homography.py # Homography calculations
+├── pipeline.py # Main processing pipeline
+│
+├── detect_players.py # Player detection script
+├── track_players.py # Player tracking script
+├── extract_features.py # Feature extraction
+├── match_players.py # Player matching across views
+├── visualize_results.py # Visualization utilities
+│
+└── requirements.txt # Project dependencies
+---
 
 ## 🚀 Setup Instructions
 
