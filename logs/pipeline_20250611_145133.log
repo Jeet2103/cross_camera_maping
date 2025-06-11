@@ -1,0 +1,7 @@
+2025-06-11 14:51:34 [INFO] [extract_features.py] Feature extractor initialized successfully.
+2025-06-11 14:51:34 [INFO] [extract_features.py] Homography matrix loaded.
+2025-06-11 14:51:34 [INFO] [extract_features.py] Extracting features for broadcast...
+2025-06-11 14:52:34 [INFO] [extract_features.py] Saved broadcast features to mapping/features/broadcast_features.npy
+2025-06-11 14:52:34 [INFO] [extract_features.py] Extracting features for tacticam...
+2025-06-11 14:56:46 [INFO] [extract_features.py] Saved tacticam features to mapping/features/tacticam_features.npy
+2025-06-11 14:56:46 [INFO] [extract_features.py] Feature extraction completed for all videos.

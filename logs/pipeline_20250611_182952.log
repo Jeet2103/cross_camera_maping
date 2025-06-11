@@ -1,0 +1,11 @@
+2025-06-11 18:29:52 [INFO] [track_players.py] Using device: cuda:0
+2025-06-11 18:29:52 [INFO] [track_players.py] Started tracking on video: broadcast
+2025-06-11 18:29:52 [INFO] [track_players.py] Loaded detections from detections/broadcast_detections.csv
+2025-06-11 18:29:52 [INFO] [track_players.py] StrongSORT tracker initialized.
+2025-06-11 18:30:02 [INFO] [track_players.py] End of video reached: broadcast
+2025-06-11 18:30:02 [INFO] [track_players.py] Tracking data saved: tracking/broadcast_tracks.csv
+2025-06-11 18:30:02 [INFO] [track_players.py] Started tracking on video: tacticam
+2025-06-11 18:30:02 [INFO] [track_players.py] Loaded detections from detections/tacticam_detections.csv
+2025-06-11 18:30:03 [INFO] [track_players.py] StrongSORT tracker initialized.
+2025-06-11 18:30:20 [INFO] [track_players.py] End of video reached: tacticam
+2025-06-11 18:30:20 [INFO] [track_players.py] Tracking data saved: tracking/tacticam_tracks.csv

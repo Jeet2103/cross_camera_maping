@@ -1,0 +1,16 @@
+ultralytics 
+opencv-python 
+torch 
+torchvision 
+numpy 
+pandas 
+matplotlib 
+deep-sort-realtime
+scikit-learn
+torchreid
+tensorboard
+cython
+charset-normalizer
+chardet
+faiss-cpu
+

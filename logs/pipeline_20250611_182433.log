@@ -1,0 +1,12 @@
+2025-06-11 18:24:33 [INFO] [pipeline.py] Ensured directory exists: data
+2025-06-11 18:24:33 [INFO] [pipeline.py] Ensured directory exists: mapping
+2025-06-11 18:24:33 [INFO] [pipeline.py] Ensured directory exists: tracking
+2025-06-11 18:24:33 [INFO] [pipeline.py] Ensured directory exists: detections
+2025-06-11 18:24:33 [INFO] [pipeline.py] Ensured directory exists: output
+2025-06-11 18:24:33 [INFO] [pipeline.py] Ensured directory exists: counts
+2025-06-11 18:24:33 [INFO] [pipeline.py] Using broadcast video: data/broadcast.mp4
+2025-06-11 18:24:33 [INFO] [pipeline.py] Using tacticam video: data/tacticam.mp4
+2025-06-11 18:24:33 [INFO] [pipeline.py] Starting stage: Compute Homography
+2025-06-11 18:24:33 [INFO] [pipeline.py] Compute Homography completed successfully.
+2025-06-11 18:24:33 [INFO] [pipeline.py] Starting stage: Detect Players
+2025-06-11 18:24:40 [ERROR] [pipeline.py] Detect Players failed. Command: python detect_players.py

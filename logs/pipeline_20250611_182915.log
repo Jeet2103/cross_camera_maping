@@ -1,0 +1,9 @@
+2025-06-11 18:29:15 [INFO] [detect_players.py] Model loaded from model/best.pt
+2025-06-11 18:29:15 [INFO] [detect_players.py] Starting detection on video: broadcast
+2025-06-11 18:29:30 [INFO] [detect_players.py] End of video stream for broadcast
+2025-06-11 18:29:30 [INFO] [detect_players.py] Detections saved to: detections/broadcast_detections.csv
+2025-06-11 18:29:30 [INFO] [detect_players.py] Counts saved to: counts/broadcast_object_counts.csv
+2025-06-11 18:29:30 [INFO] [detect_players.py] Starting detection on video: tacticam
+2025-06-11 18:29:46 [INFO] [detect_players.py] End of video stream for tacticam
+2025-06-11 18:29:46 [INFO] [detect_players.py] Detections saved to: detections/tacticam_detections.csv
+2025-06-11 18:29:46 [INFO] [detect_players.py] Counts saved to: counts/tacticam_object_counts.csv

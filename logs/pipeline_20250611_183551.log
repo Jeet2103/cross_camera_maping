@@ -1,0 +1,8 @@
+2025-06-11 18:35:51 [INFO] [visualize_results.py] Successfully loaded ID mapping from 'mapping/id_mapping.json'.
+2025-06-11 18:35:51 [INFO] [visualize_results.py] Started visualization for 'broadcast' at 1920x1080, 24.81203007518797 FPS.
+2025-06-11 18:35:53 [INFO] [visualize_results.py] Finished processing all frames for 'broadcast'.
+2025-06-11 18:35:53 [INFO] [visualize_results.py] Visualization saved to output/broadcast_output.mp4
+2025-06-11 18:35:53 [INFO] [visualize_results.py] Started visualization for 'tacticam' at 1920x1080, 24.63235294117647 FPS.
+2025-06-11 18:35:56 [INFO] [visualize_results.py] Finished processing all frames for 'tacticam'.
+2025-06-11 18:35:56 [INFO] [visualize_results.py] Visualization saved to output/tacticam_output.mp4
+2025-06-11 18:35:56 [INFO] [visualize_results.py] All visualizations completed.

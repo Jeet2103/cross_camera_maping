@@ -1,0 +1,21 @@
+2025-06-11 18:29:12 [INFO] [pipeline.py] Ensured directory exists: data
+2025-06-11 18:29:12 [INFO] [pipeline.py] Ensured directory exists: mapping
+2025-06-11 18:29:12 [INFO] [pipeline.py] Ensured directory exists: tracking
+2025-06-11 18:29:12 [INFO] [pipeline.py] Ensured directory exists: detections
+2025-06-11 18:29:12 [INFO] [pipeline.py] Ensured directory exists: output
+2025-06-11 18:29:12 [INFO] [pipeline.py] Ensured directory exists: counts
+2025-06-11 18:29:12 [INFO] [pipeline.py] Using broadcast video: data/broadcast.mp4
+2025-06-11 18:29:12 [INFO] [pipeline.py] Using tacticam video: data/tacticam.mp4
+2025-06-11 18:29:12 [INFO] [pipeline.py] Starting stage: Compute Homography
+2025-06-11 18:29:12 [INFO] [pipeline.py] Compute Homography completed successfully.
+2025-06-11 18:29:12 [INFO] [pipeline.py] Starting stage: Detect Players
+2025-06-11 18:29:46 [INFO] [pipeline.py] Detect Players completed successfully.
+2025-06-11 18:29:46 [INFO] [pipeline.py] Starting stage: Track Players
+2025-06-11 18:30:21 [INFO] [pipeline.py] Track Players completed successfully.
+2025-06-11 18:30:21 [INFO] [pipeline.py] Starting stage: Extract Features
+2025-06-11 18:35:49 [INFO] [pipeline.py] Extract Features completed successfully.
+2025-06-11 18:35:49 [INFO] [pipeline.py] Starting stage: Match Players
+2025-06-11 18:35:50 [INFO] [pipeline.py] Match Players completed successfully.
+2025-06-11 18:35:50 [INFO] [pipeline.py] Starting stage: Visualize Results
+2025-06-11 18:35:56 [INFO] [pipeline.py] Visualize Results completed successfully.
+2025-06-11 18:35:56 [INFO] [pipeline.py] All pipeline stages executed successfully.
