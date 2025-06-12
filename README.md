@@ -133,3 +133,4 @@ Maintained by **Jeet Nandigrami**
 - GitHub: [Jeet2103](https://github.com/Jeet2103)  
 - LinkedIn: [Jeet Nandigrami](https://www.linkedin.com/in/jeet-nandigrami/)
 - Resume : [RESUME](https://drive.google.com/file/d/1Zvm0yAK--t_K-lNBpLnDFA2Lz41ZBqvX/view?usp=sharing)
+- Email : jeetnandigrami2103@gmail.com
