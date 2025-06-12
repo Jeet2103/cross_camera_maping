@@ -158,6 +158,9 @@ Applied for L2 normalization, cosine similarity validation, and clustering metri
 - **DeepSORT for Tracking:**
 Initially integrated for temporal tracking but failed to maintain stable identities under frequent occlusions and dense group interactions, leading to frequent ID switches.
 
+- **ResNet-50 for Feature Extraction:**
+Initially used as a baseline for extracting appearance features, but the model lacked fine-grained ReID capabilities. It failed to differentiate between visually similar players, especially under motion blur or low resolution.
+
 - **EfficientNet-B3 for Feature Extraction:**
 Tried as an alternative to OSNet for ReID, but failed to generate sufficiently discriminative features for cross-player matching. Resulted in low identity recall.
 
@@ -168,7 +171,7 @@ Attempted direct cosine similarity matching between broadcast and tacticam featu
 
 - **Frameworks & Libraries:** PyTorch, Torchvision, OpenCV, Scikit-learn, TensorBoard, Torchreid, FAISS, SciPy
 
-- **Models & Algorithms:** YOLOv5, StrongSORT, OSNet, EfficientNet-B3, DeepSORT, Hungarian Algorithm, Homography
+- **Models & Algorithms:** YOLOv5, StrongSORT, OSNet, Resnet50, EfficientNet-B3, DeepSORT, Hungarian Algorithm, Homography
 
 - **Programming Language:** Python
 
