@@ -1,6 +1,7 @@
 # Cross Camera Mapping Project
 
-This project is an advanced cross-view player tracking system that accurately maps and re-identifies players across broadcast and tactical camera feeds using state-of-the-art computer vision techniques.
+The objective of this project is to build an advanced cross-view player tracking and re-identification system that effectively maps and tracks players across broadcast and tactical (top-down) camera views. In sports analytics, especially in football or basketball, player identities often become ambiguous when switching between different camera feeds. This system addresses that challenge by ensuring consistent player identification across disjoint views, enabling deeper insights into player movements, formations, and tactical decisions.
+
 
 ## Key Features
 - **Multi-Camera Tracking**: Seamless player identification across different views
